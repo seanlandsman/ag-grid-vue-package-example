@@ -40,7 +40,6 @@
                          :columnDefs="columnDefs"
                          :rowData="rowData"
                          :sideBar="sideBar"
-                         :modules="modules"
 
                          :defaultColDef="{
                             sortable: true,
@@ -78,13 +77,7 @@
 </template>
 
 <script>
-    import {AgGridVue} from "@ag-grid-community/vue";
-
-    // for community features
-    // import {AllCommunityModules} from "@ag-grid-community/all-modules";
-
-    // for enterprise features
-    import {AllModules} from "@ag-grid-enterprise/all-modules";
+    import {AgGridVue} from "ag-grid-vue";
 
     import {ProficiencyFilter} from './proficiencyFilter';
     import {SkillFilter} from './skillFilter';
@@ -100,8 +93,7 @@
                 rowData: null,
                 showGrid: false,
                 sideBar: false,
-                rowCount: null,
-                modules: AllModules
+                rowCount: null
             }
         },
         components: {

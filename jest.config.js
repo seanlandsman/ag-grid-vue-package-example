@@ -16,7 +16,7 @@ module.exports = {
   snapshotSerializers: [
     'jest-serializer-vue'
   ],
-  transformIgnorePatterns: ['node_modules/(?!(@ag-grid-community/vue)/)'],
+  transformIgnorePatterns: ['node_modules/(?!(ag-grid-vue)/)'],
   testMatch: [
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
   ],
