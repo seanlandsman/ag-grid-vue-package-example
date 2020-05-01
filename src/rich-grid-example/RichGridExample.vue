@@ -77,6 +77,8 @@
 <script>
     import {AgGridVue} from "ag-grid-vue";
 
+    import 'ag-grid-enterprise';
+
     import {ProficiencyFilter} from './proficiencyFilter';
     import {SkillFilter} from './skillFilter';
     import DateComponent from './DateComponent.vue';
