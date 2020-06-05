@@ -89,6 +89,7 @@
         data() {
             return {
                 gridOptions: null,
+                api: null,
                 columnDefs: null,
                 rowData: null,
                 showGrid: false,
@@ -199,7 +200,7 @@
             },
 
             calculateRowCount() {
-                if (this.gridOptions.api && this.rowData) {
+                if (this.api && this.rowData) {
                     let model = this.gridOptions.api.getModel();
                     let totalRows = this.rowData.length;
                     let processedRows = model.getRowCount();
@@ -212,9 +213,13 @@
                 this.calculateRowCount();
             },
 
-            onReady() {
+            onReady(params) {
                 console.log('onReady');
+
+                this.api = params.api;
                 this.calculateRowCount();
+
+                this.api.sizeColumnsToFit();
             },
 
             onCellClicked(event) {
